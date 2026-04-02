@@ -1,0 +1,51 @@
+.row {
+  display: flex;
+  &:hover {
+    background: #DFF;
+  }
+}
+
+.addr.paused {
+  cursor: pointer;
+  &:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+.break {
+  width: 2em;
+  text-align: center;
+
+  .point {
+    color: red;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  .tmp {
+    color: #888;
+  }
+}
+
+.opCode {
+  width: 8em;
+}
+
+.opName {
+  width: 4em;
+}
+
+.curCmd {
+  font-weight: bold;
+}
+
+.opArgs {
+  display: flex;
+  gap: 8px;
+}
+
+// Адрес перехода для текущей команды
+.dstPos {
+  background-color: #DFD;
+}

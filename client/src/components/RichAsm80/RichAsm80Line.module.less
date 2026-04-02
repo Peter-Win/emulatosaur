@@ -1,0 +1,94 @@
+.comm {
+  color: #7A7;
+  font-weight: normal;
+}
+.line {
+  padding-left: 6px;
+  display: flex;
+  &:hover {
+    background-color: #F0F0F0;
+  }
+  // Текущая команда
+  &.current {
+    font-weight: bold;
+    background-color: #DFD;
+    &:hover { background-color: #AFA; }
+  }
+  &.altAddr {
+    background-color: #FFD;
+    &:hover { background-color: #FFA; }
+  }
+}
+
+.brk {
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    color: brown;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.addr {
+  width: 42px;
+  button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    &:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+.jmpDir {
+  cursor: pointer;
+  color: #888;
+  padding: 0 8px;
+  &.condition { color: #808;}
+}
+
+.string {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.byteCode {
+  width: 75px;
+  display: flex;
+  gap: 3px;
+}
+
+.cmdPrefix {
+  width: 50px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.opName {
+  width: 50px;
+  // Команда, за которой не может быть выполняемого кода (jmp, ret)
+  &.isFinal {
+    margin-bottom: 10px;
+  }
+}
+
+.inlineComment {
+  .string();
+  .comm();
+  padding-left: 40px;
+  flex: 1;
+}

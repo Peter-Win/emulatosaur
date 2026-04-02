@@ -1,0 +1,24 @@
+.frame {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 1fr 180px;
+  grid-template-rows: 1fr 180px;
+  grid-template-areas: 
+    "asm reg"
+    "mem stk"
+  ;
+  gap: 1px;
+}
+.asm {
+  grid-area: asm;
+}
+.reg {
+  grid-area: reg;
+}
+.mem {
+  grid-area: mem;
+}
+.stk {
+  grid-area: stk;
+}

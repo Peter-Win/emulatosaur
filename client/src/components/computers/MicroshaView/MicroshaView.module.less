@@ -1,0 +1,25 @@
+.frame {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas: 
+    "disp debug"
+    "tap debug"
+    "kbd debug"
+  ;
+  gap: 1px;
+}
+
+.disp {
+  grid-area: disp;
+}
+.kdd {
+  grid-area: kbd;
+}
+.tap {
+  grid-area: tap;
+}
+.debug {
+  grid-area: debug;
+}

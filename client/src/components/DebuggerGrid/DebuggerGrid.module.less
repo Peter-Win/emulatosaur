@@ -1,0 +1,30 @@
+.frame {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(100px, 1fr) 200px;
+  grid-template-rows: minmax(100px, 1fr) 200px auto;
+  grid-template-areas:
+    "dis asm regs"
+    "dis mem mem"
+    "kbd kbd kbd";
+}
+
+.display {
+  grid-area: dis;
+}
+
+.asm {
+  grid-area: asm;
+}
+
+.regs {
+  grid-area: regs;
+}
+
+.memory {
+  grid-area: mem;
+}
+
+.kbd {
+  grid-area: kbd;
+}

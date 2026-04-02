@@ -1,0 +1,98 @@
+
+.keyboardBox {
+  display: flex;
+  justify-content: center;
+}
+
+@dx: 1px;
+@dy: 1px;
+@width: 24px;
+@height: 38px;
+@ledSize: 10px;
+@activeLedColor: #5E5;
+@offLedColor: #888;
+
+.leftPart, .rightPart {
+  display: flex;
+  flex-direction: column;
+  gap: @dy;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  padding: (@height * 2.5) 8px 0 0;
+  .rus {
+    color: #888;
+    font-size: 12px;
+  }
+  .led {
+    background-color: @offLedColor;
+    box-shadow: 0 0 2px @offLedColor;
+    width: @ledSize;
+    height: @ledSize;
+    border-radius: 50%;
+    &.active {
+      background-color: @activeLedColor;
+      box-shadow: 0 0 2px #888;
+    }
+  }
+}
+
+
+.row {
+  display: flex;
+  gap: @dx;
+}
+
+.keyStd {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-stretch: condensed;
+  border-radius: 4px;
+  padding: 2px;
+  width: @width;
+  height: @height;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+  &:active {
+    outline: none;
+  }
+  &.red {
+    background-color: #de1a26;
+    color: white;
+  }
+  &.pressed {
+    background-color: #555;
+  }
+  &.red.pressed {
+    text-decoration: underline;
+    background-color: darken(#de1a26, 10%);
+  }
+}
+
+.widthStd {
+  width: @width;
+}
+.widthExt {
+  width: @width * 1.3;
+}
+.widthHalf {
+  width: @width * 0.5;
+}
+.widthDouble {
+  width: @width * 2 + @dx;
+}
+.space {
+  width: 6 * @width;
+  height: 0.6 * @height;
+  margin-left: 4.5 * @width;
+}
